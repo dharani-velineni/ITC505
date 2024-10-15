@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.rollover-img {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.3s ease;
+}
+
+.rollover-img:hover {
+    transform: scale(1.2);
+}
+
+#colorButton {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#colorButton.yellow {
+    background-color: yellow;
+    color: black; 
+}
+
+#colorButton.green {
+    background-color: green;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    padding: 8px 16px;
+}

@@ -1,0 +1,4 @@
+{
+    "postCreateCommand": "pm2 resurrect"
+  }
+  

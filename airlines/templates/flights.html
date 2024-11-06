@@ -1,0 +1,16 @@
+<!-- flights.html -->
+{% extends 'base.html' %}
+{% block title %}Available Flights{% endblock %}
+{% block content %}
+    <h2>Available Flights</h2>
+    <ul class="list-group">
+        {% for flight in flights %}
+            <li class="list-group-item">
+                {{ flight.from }} to {{ flight.to }} - {{ flight.price }}
+                <form method="POST" action="{{ url_for('book', flight_id=flight.id) }}" class="d-inline">
+                    <button type="submit" class="btn btn-primary btn-sm float-right">Book Now</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

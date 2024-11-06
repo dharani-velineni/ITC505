@@ -1,0 +1,7 @@
+<!-- home.html -->
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <h1>Welcome, {{ current_user.email }}</h1>
+    <p>Explore flights and make bookings with ease.</p>
+{% endblock %}

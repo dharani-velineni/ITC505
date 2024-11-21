@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Lights Out Game</h1>
+    <p>Click on a cell to toggle it and its neighbors. Turn off all the lights to win!</p>
+    <div class="info-panel">
+        <p><strong>Target Moves:</strong> <span id="target-moves"></span></p>
+        <p><strong>Your Moves:</strong> <span id="player-moves">0</span></p>
+        <p><strong>Time Elapsed:</strong> <span id="time-elapsed">0</span> seconds</p>
+    </div>
+    <div id="game-board"></div>
+
+    <section id="addendum">
+        <h2>Addendum: Process and Challenges</h2>
+        <p><strong>Process:</strong> The game was developed by first creating the core mechanics to toggle the lights and check for a win condition. A randomized but solvable configuration was achieved by starting with an all-on board and applying a set number of random toggles. Features like move counting, timing, and visual/sound embellishments were added to enhance user experience.</p>
+
+        <p><strong>Challenges:</strong> The primary challenge was ensuring that the randomized board was always solvable. This was solved by simulating random toggles on an all-on board. Implementing a responsive design for different devices and ensuring the timer didn't interfere with game performance also required careful adjustments.</p>
+
+        <p><strong>Insights Gained:</strong> 
+            <ul>
+                <li>Simple, responsive UI design greatly improves player satisfaction.</li>
+                <li>Small embellishments, such as sounds and animations, significantly enhance engagement.</li>
+                <li>Testing and iterating on the design helped refine both functionality and aesthetics.</li>
+            </ul>
+        </p>
+    </section>
+
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script>
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
